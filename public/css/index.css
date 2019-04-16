@@ -31,3 +31,7 @@ pre {
 	border: 1px solid grey;
 	box-sizing: border-box;
 }
+#github {
+	margin: 20px;
+	width: 40px;
+}

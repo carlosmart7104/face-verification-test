@@ -46,7 +46,7 @@ El objeto devuelto es un error o un json con el siguiente formato:
 ``` bash
 {
   threshold: number, // Umbral de aceptación, de menor similitud (0.0) a mayor similitud (1.0)
-  distante: float, // Distancia euclidiana (similitud entre 0.0 y 1.0)
-  match: Bolean, // Coincidencia (será verdadero si distance < threshold, de lo contrario será falso)
+  distante: number, // Distancia euclidiana (similitud entre 0.0 y 1.0)
+  match: boolean // Coincidencia (será verdadero si distance < threshold, de lo contrario será falso)
 }
 ```

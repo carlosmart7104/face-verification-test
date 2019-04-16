@@ -24,12 +24,15 @@ El uso del api es el siguiente:
 ``` bash
 const URL = '/api/verify';
 const METHOD = 'POST';
+const HEADERS = {
+  'Content-Type': 'application/json'
+};
 const BODY = JSON.stringify({
   threshold: 0.5, // ajuste de aceptación
   a: string, // primera foto codificada en base64
   b: string // segunda foto codificada en base64
 });
-fetch(URL, { method: METHOD, body: BODY })
+fetch(URL, { method: METHOD, headers: HEADERS, body: BODY })
   .then((response) => {
     response.json()
       .then((data) => {

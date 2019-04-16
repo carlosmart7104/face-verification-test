@@ -36,7 +36,7 @@ fetch(URL, { method: METHOD, headers: HEADERS, body: BODY })
   .then((response) => {
     response.json()
       .then((data) => {
-        console.log(`result: ${data}`);
+        console.log(`result: ${JSON.stringify(data)}`);
       })
       .catch(error => console.log(error));
   })

@@ -1,8 +1,0 @@
-{
-  "name": "Face Verification Test",
-  "description": "API de reconocimiento visual con expressjs y face-api.js",
-  "repository": "https://github.com/carlosmart7104/face-verification-test.git",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
-  "keywords": ["face","verification", "test"],
-  "image": "heroku/nodejs"
-}

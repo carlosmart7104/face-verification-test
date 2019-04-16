@@ -8,6 +8,6 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use('/api', apiRouter);
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
 	console.log('run server on localhost:3000');
 });

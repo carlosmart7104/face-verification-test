@@ -1,0 +1,33 @@
+* {
+	font-family: Arial, Sans Serif;
+}
+h2 {
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+}
+.image-container, .api-container {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.image-content, .api-content {
+	display: inline;
+}
+.image, .image img, .image select {
+	display: inline-block;
+	width: 250px;
+}
+button {
+	margin: 10px 0px;
+	width: 500px;
+}
+pre {
+	width: 500px;
+	min-height: 80px;
+	margin: 0 auto;
+	padding: 15px;
+	text-align: left;
+	border: 1px solid grey;
+	box-sizing: border-box;
+}

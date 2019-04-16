@@ -1,0 +1,19 @@
+{
+  "name": "facematch-api",
+  "version": "1.0.0",
+  "description": "API para verificación de identidad con dos fotos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Carlos Martínez <carlosmart7104@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^1.0.3",
+    "body-parser": "^1.18.3",
+    "canvas": "^2.4.1",
+    "express": "^4.16.4",
+    "face-api.js": "^0.19.0"
+  }
+}

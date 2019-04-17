@@ -2,6 +2,8 @@
 
 Éste es un ejemplo de API de reconocimiento visual creado con expressjs y face-api.js
 
+Demo: https://face-verification-test.herokuapp.com/
+
 ## Obtener una copia local
 ``` bash
 git clone https://github.com/carlosmart7104/face-verification-test.git
@@ -24,7 +26,6 @@ El uso del api es el siguiente:
 
 ### Match
 Responde si dos fotos contienen a la misma persona, ambas fotos son enviadas en la petición:
-Ejemplo: https://face-verification-test.herokuapp.com/
 ``` bash
 const URL = '/api/match';
 const METHOD = 'POST';
@@ -50,10 +51,11 @@ fetch(URL, {
   })
   .catch(error => console.log(error));
 ```
+Ejemplo: https://face-verification-test.herokuapp.com/
 
 ### Verify
 Responde si una foto contiene a la persona que dice contener (por medio de una etiqueta o id), buscando en una base de datos:
-Ejemplo: https://face-verification-test.herokuapp.com/verify.html
+
 ``` bash
 const URL = '/api/verify';
 const METHOD = 'POST';
@@ -79,6 +81,9 @@ fetch(URL, {
   })
   .catch(error => console.log(error));
 ```
+Ejemplo: https://face-verification-test.herokuapp.com/verify.html
+
+## Response
 
 En ambos casos, el objeto devuelto es un error o un json con el siguiente formato:
 ``` bash

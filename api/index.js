@@ -1,9 +1,21 @@
 var express = require('express');
-var verify = require('../face-api/verify');
+var faceapi = require('../face-api/index');
 var api = express.Router();
 
+api.post('/match', function (req, res) {
+	console.log('/api/match');
+	faceapi.match(req.body)
+		.then(function(data) {
+			res.json(data);
+		})
+		.catch(function (err) {
+			res.json(err);
+		});
+});
+
 api.post('/verify', function (req, res) {
-	verify.match(req.body)
+	console.log('/api/verify');
+	faceapi.verify(req.body)
 		.then(function(data) {
 			res.json(data);
 		})

@@ -17,13 +17,14 @@ npm i
 ``` bash
 npm run start
 ```
-Luego de esto puede ver abrir en el navegador: http://localhost:3000
+Luego de esto puede verse abriendo en el navegador: http://localhost:3000
 
 # API
 El uso del api es el siguiente:
 
 ### Match
 Responde si dos fotos contienen a la misma persona, ambas fotos son enviadas en la petición:
+Ejemplo: https://face-verification-test.herokuapp.com/
 ``` bash
 const URL = '/api/match';
 const METHOD = 'POST';
@@ -52,6 +53,7 @@ fetch(URL, {
 
 ### Verify
 Responde si una foto contiene a la persona que dice contener (por medio de una etiqueta o id), buscando en una base de datos:
+Ejemplo: https://face-verification-test.herokuapp.com/verify.html
 ``` bash
 const URL = '/api/verify';
 const METHOD = 'POST';

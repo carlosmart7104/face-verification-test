@@ -21,8 +21,11 @@ Luego de esto puede ver abrir en el navegador: http://localhost:3000
 
 # API
 El uso del api es el siguiente:
+
+### Match
+Responde si dos fotos contienen a la misma persona, ambas fotos son enviadas en la petición:
 ``` bash
-const URL = '/api/verify';
+const URL = '/api/match';
 const METHOD = 'POST';
 const HEADERS = {
   'Content-Type': 'application/json'
@@ -46,7 +49,36 @@ fetch(URL, {
   })
   .catch(error => console.log(error));
 ```
-El objeto devuelto es un error o un json con el siguiente formato:
+
+### Verify
+Responde si una foto contiene a la persona que dice contener (por medio de una etiqueta o id), buscando en una base de datos:
+``` bash
+const URL = '/api/verify';
+const METHOD = 'POST';
+const HEADERS = {
+  'Content-Type': 'application/json'
+};
+const BODY = JSON.stringify({
+  threshold: 0.5, // ajuste de aceptación
+  image: string, // foto codificada en base64
+  label: string // etiqueta o identificador a verificar
+});
+fetch(URL, {
+  method: METHOD,
+  headers: HEADERS,
+  body: BODY
+})
+  .then((response) => {
+    response.json()
+      .then((data) => {
+        console.log(`result: ${JSON.stringify(data)}`);
+      })
+      .catch(error => console.log(error));
+  })
+  .catch(error => console.log(error));
+```
+
+En ambos casos, el objeto devuelto es un error o un json con el siguiente formato:
 ``` bash
 {
   threshold: number, // Umbral de aceptación, de menor similitud (0.0) a mayor similitud (1.0)
